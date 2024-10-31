@@ -1,8 +1,8 @@
 import requests
 import json
-from opencc import OpenCC
+# from opencc import OpenCC
 import streamlit as st
-cc = OpenCC('s2t')
+# cc = OpenCC('s2t')
 
 headers = {
         "Content-Type": "application/json",
@@ -117,9 +117,12 @@ if name:
         answer = json.loads(message_sub1['choices'][0]['message']['content'])
 
         array.append(name[i])
-        array.append(cc.convert(answer["字1"]))
-        array.append(cc.convert(answer["字2"]))
-        array.append(cc.convert(answer["字3"]))
+        # array.append(cc.convert(answer["字1"]))
+        # array.append(cc.convert(answer["字2"]))
+        # array.append(cc.convert(answer["字3"]))
+        array.append((answer["字1"]))
+        array.append((answer["字2"]))
+        array.append((answer["字3"]))
 
 
 
