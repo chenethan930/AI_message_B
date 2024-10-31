@@ -1,6 +1,5 @@
 import requests
 import json
-import openai
 from opencc import OpenCC
 import streamlit as st
 cc = OpenCC('s2t')
